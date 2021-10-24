@@ -17,14 +17,16 @@ void init_sqlist(SqList& sl);
 
 /*打印顺序表*/
 void print_sqlist(SqList& l);
-
-/*插入操作*/
+/*
+插入操作。在顺序表的位置pos处插入元素 value, 若插入失败，则输出false, 插入成功返回true
+*/
+/**/
 bool ListInsert(SqList&l, ElemType value, int pos);
 
-/*删除特定位置元素*/
+/*删除特定位置元素。删除顺序表，位置为 pos的值， 操作成功返回true,操作失败返回false*/
 bool delete_sqlist(SqList& sl, int pos);
 
-/*按值查找*/
+/*按值查找。 在顺序表中查找 元素t, 返回查找的索引位置，若查找失败返回-1*/
 int find_value_pos(SqList& sl, ElemType t);
 
 /*查找最小的元素的位置*/

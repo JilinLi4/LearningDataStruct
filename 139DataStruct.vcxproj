@@ -158,6 +158,7 @@
     <ClCompile Include="SquenceList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="139DataStruct.h" />
     <ClInclude Include="bin_tree.h" />
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="sort.h" />
