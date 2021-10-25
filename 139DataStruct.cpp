@@ -11,7 +11,6 @@ int main()
 	bool is_success = ListInsert(sl, 10, 0); //插入值， is_success 是否成功
 	cout << "插入后的顺序表" << endl;
 	print_sqlist(sl);
-
     std::cout << "Hello World!\n";
 }
 
