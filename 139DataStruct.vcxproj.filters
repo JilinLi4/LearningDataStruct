@@ -30,6 +30,9 @@
     <ClCompile Include="sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="StackBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SquenceList.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StackBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

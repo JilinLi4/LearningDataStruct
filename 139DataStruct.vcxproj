@@ -156,12 +156,14 @@
     <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="SquenceList.cpp" />
+    <ClCompile Include="StackBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bin_tree.h" />
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="SquenceList.h" />
+    <ClInclude Include="StackBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

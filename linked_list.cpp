@@ -163,16 +163,13 @@ LNode* merge_linked_list(LNode* l1, LNode* l2)
 	return result;
 }
 
-int add(int a, int b)
+/*寻找链表的最小值节点， 并返回在链表中的位置*/
+int find_min_in_linkedlist(LNode * head)
 {
-	int result = a + b;
-	return result;
+
+	return 0;
 }
 
-int my_mult(int a, int b)
-{
-	return a*b;
-}
 
 /*链表长度*/
 int find_length(LNode* head)
