@@ -1,5 +1,5 @@
 #include "linked_list.h"
-
+#include <math.h>
 #include <iostream>
 using namespace std;
 
@@ -166,9 +166,154 @@ LNode* merge_linked_list(LNode* l1, LNode* l2)
 /*寻找链表的最小值节点， 并返回在链表中的位置*/
 int find_min_in_linkedlist(LNode * head)
 {
-
-	return 0;
+	int i = 1;
+	int cnt = INT_MAX;
+	int pos = 0;
+	for (LNode*p = head->next; p != NULL; p = p->next)
+	{
+		if (p->data < cnt)
+		{
+			cnt = p->data;
+			pos = i;
+		}
+		i++;
+	}//end for
+	return pos;
 }
+
+/*8.  删除链表中值最小的元素, 并返回最小元素*/
+ElemType delete_min_value(LNode * head)
+{
+	int cnt = INT_MAX;
+	LNode *temp = head;
+	LNode*f = head;
+	for (LNode*p = head; p->next != NULL; p = p->next)
+	{
+		if (p->next->data < cnt)
+		{
+			cnt = p->next->data;
+			temp = p;
+		}
+	}//end for
+
+	f = temp->next;
+	temp = f->next;
+	f->next = NULL;
+	delete f;
+	return cnt;
+}
+
+/*9. 查找第i个节点，并返回值*/
+ElemType find_i(LNode * head)
+{
+
+	return ElemType();
+}
+
+/*创建双链表*/
+DBLNode * create_double_linked_list()
+{
+	SqList sl;
+	init_sqlist(sl);
+
+	DBLNode *head = new DBLNode;
+    head->prior=NULL;
+    head->next=NULL;
+	DBLNode *p = head;
+	for (int i =0;i<sl.length;i++)
+	{
+		DBLNode *temp = new DBLNode;
+		temp->data = sl.data[i];
+		temp->prior=p;
+		temp->next=NULL;
+		p -> next = temp;
+		p = p->next;
+	}
+
+	return head;
+}
+/*打印双链表*/
+void print_linked_list(DBLNode *head)
+{
+	for (DBLNode *p = head; p->next != NULL; p = p->next)
+	{
+		cout << p->next->data <<" " ;
+	}
+	cout << endl;
+}
+
+/*9.  在第n个节点后，插入节点*/
+void insert_pos_n(DBLNode * head, int n, ElemType value)
+{
+	DBLNode *p = head;
+	for (int i = 1; i <= n; i++)
+	{
+		if (p == NULL)
+			return;
+		p = p->next;
+	}
+
+	DBLNode *temp = new DBLNode;
+	temp->prior = NULL;
+	temp->next = NULL;
+	temp->data = value;
+
+	
+	DBLNode * f = p->next;
+	temp->prior = p;
+	p->next = temp;
+	temp->next = f;
+	f->prior =temp;
+
+}
+
+/*
+		DBLNode* head = create_double_linked_list();
+		print_linked_list(head);
+		insert_pos_n(head, 1, -1);
+		print_linked_list(head);
+		std::cout << "Hello World!\n";
+
+		case1: 1 2 3 4 5 6 7
+		输出： 1 -1 2 3 4 5 6 7
+*/
+
+
+/*10.  删除第n个节点*/
+
+void  delete_pos_n(DBLNode * head,  int n)
+{
+	DBLNode *p = head;
+	for (int i = 1; i <= n; i++)
+	{
+		if (p == NULL)
+			return;
+
+		p = p->next;
+	}
+
+	DBLNode *f = p->next;
+	
+	f->prior = p->prior;
+	p->prior->next = f;
+	p->prior = NULL;
+	p->next = NULL;
+	delete p;
+	p = NULL;
+	
+}
+
+
+/*
+	DBLNode* head = create_double_linked_list();
+	print_linked_list(head);
+	delete_pos_n(head, 2);
+	print_linked_list(head);
+
+	case1:  1 2 3 4 5 6
+	输出： 1 3 4 5 6
+*/
+//end int
 
 
 /*链表长度*/

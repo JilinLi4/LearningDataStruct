@@ -1,5 +1,6 @@
 #pragma once
 #include "SquenceList.h"
+typedef bool Status;
 /*单链表节点的定义*/
 typedef int ElemType;
 struct LNode
@@ -37,7 +38,11 @@ LNode* merge_linked_list(LNode* l1, LNode* l2);
 int find_min_in_linkedlist(LNode* head);
 
 /*8.  删除链表中值最小的元素*/
-void delete_min_value(LNode* head);
+ElemType delete_min_value(LNode* head);
+
+/*9. 查找第i个节点，并返回值*/
+ElemType find_i(LNode* head);
+
 
 
 /*********************************************************************************************\
@@ -48,18 +53,18 @@ struct DBLNode
 {
 	ElemType data;
 	DBLNode* next;
-	DBLNode* front;
+	DBLNode* prior;
 };
 
 /*创建双链表*/
 DBLNode* create_double_linked_list();
 
 /*打印双链表*/
-void print_db_linked_list();
+void print_linked_list(DBLNode* head);
 
 /*9.  在第n个节点后，插入节点*/
 void insert_pos_n(DBLNode* head, int n, ElemType value);
 
 /*10.  删除第n个节点*/
-void delete_pos_n(DBLNode* head);
+void delete_pos_n(DBLNode * head, int n);
 

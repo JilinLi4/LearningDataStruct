@@ -4,14 +4,14 @@
 #include <iostream>
 #include "SquenceList.h"
 #include "linked_list.h"
+#include "bin_tree.h"
 using namespace std;
 int main()
 {
-	LNode* l1 = create_linked_list();
-	LNode* l2 = create_linked_list();
-	LNode* L = merge_linked_list(l1, l2);
-	print_linked_list(L);
-
-    std::cout << "Hello World!\n";
+	BiTreeNode* head = create_bitree();
+	pre_order_visit(head);
+	cout << endl;
+	/*int btree_height = bitree_height(head);
+	cout << "height: " << btree_height << endl;*/
 }
 

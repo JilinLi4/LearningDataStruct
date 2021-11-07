@@ -1,35 +1,52 @@
-#pragma once
-#include "SquenceList.h"
-#include "linked_list.h"
-typedef int ElemType;
+#define MAXSIZE 100
+typedef int DataType;
 
 
-class StackBase
+/*顺序栈的定义*/
+struct Stack
 {
-
-public:
-	//初始化
-	virtual void init_stack();
-	//压栈
-	virtual bool push(ElemType data);
-	//弹栈
-	virtual void pop();
-	//取栈顶
-	virtual ElemType front();
+	DataType data[MAXSIZE];
+	int top; //栈顶
 };
 
 
-class LinkedListStack : public StackBase
-{
-public:
-	//初始化
-	virtual void init_stack();
-	//压栈
-	virtual bool push(ElemType data);
-	//弹栈
-	virtual void pop();
-	//取栈顶
-	virtual ElemType front();
+/*初始化栈*/
+void init_stack(Stack& sk);
 
+
+/*判空*/
+bool empty(Stack& sk);
+
+/*判满*/
+bool full(Stack& sk);
+
+/*进栈*/
+bool push(Stack& sk, DataType data);
+
+/*出栈*/
+bool pop(Stack& sk, DataType& topdata);
+
+/*取栈顶元素*/
+DataType front(Stack& sk);
+
+/*链式栈的定义*/
+struct LinkedStack
+{
+	DataType data;
+	LinkedStack* next;
 };
+
+/*链式栈初始化*/
+LinkedStack* init_stack();
+
+/*判空*/
+bool empty(LinkedStack* lsk);
+
+/*进栈*/
+bool push(LinkedStack*sk, DataType data);
+
+/*出栈*/
+bool pop(LinkedStack*sk, DataType& top_data);
+
+
 
