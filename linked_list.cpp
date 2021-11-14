@@ -3,15 +3,15 @@
 #include <iostream>
 using namespace std;
 
-/*´´½¨´øÍ·½ÚµãÁ´±í, ´«ÈëË³Ðò±í*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½*/
 LNode* create_linked_list(SqList& sl)
 {
-	/*´´½¨Í·½Úµã ºÍÁÙÊ±½Úµã*/
+	/*ï¿½ï¿½ï¿½ï¿½Í·ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Úµï¿½*/
 	LNode* head = new LNode;
 	head->next = nullptr;
 	LNode* p = head;
 
-	//Ë³Ðò±í×ªÁ´±í
+	//Ë³ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
 	for (int i = 0; i < sl.length; i++)
 	{
 		LNode* temp = new LNode;
@@ -24,7 +24,7 @@ LNode* create_linked_list(SqList& sl)
 	return head;
 }
 
-/*´´½¨Á´±í*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 LNode* create_linked_list()
 {
 	SqList sl;
@@ -32,7 +32,7 @@ LNode* create_linked_list()
 	return create_linked_list(sl);
 }
 
-/*Á´±í³¤¶È*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 int linked_list_len(LNode* head)
 {
 	if (head == NULL)
@@ -45,7 +45,7 @@ int linked_list_len(LNode* head)
 	return len;
 }
 
-/*Êä³öÁ´±í*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 void print_linked_list(LNode* head)
 {
 	/* head != NULL*/
@@ -61,7 +61,7 @@ void print_linked_list(LNode* head)
 	cout << endl;
 }
 
-/*ÄæÐòÊä³ö*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 void reverse_print(LNode* head)
 {
 	if (head == NULL)
@@ -80,7 +80,7 @@ void reverse_print_linked_list(LNode* head)
 }
 
 
-/*ÄæÖÃ  Î²²å·¨*/
+/*ï¿½ï¿½ï¿½ï¿½  Î²ï¿½å·¨*/
 void reverse_linked_list(LNode* head)
 {/*
     
@@ -101,7 +101,7 @@ void reverse_linked_list(LNode* head)
 	}
 }
 
-/*²ð·ÖÅ¼ÊýºÍÆæÊý*/
+/*ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 void split_linked_list(LNode* head, LNode* head1, LNode* head2)
 {
 	LNode* p = head->next;
@@ -130,7 +130,7 @@ void split_linked_list(LNode* head, LNode* head1, LNode* head2)
 
 }
 
-/*ºÏ²¢Á½¸öÁ´±í, ¼ÓÈëhead1 ºÍ head2 ÖÐµÄÁ´±íÒÑ¾­ÓÐÐò£¬½«head1ºÍhead2 ºÏ²¢Îªhead£¬ÈÃheadÒ²ÓÐÐò*/
+/*ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½head1 ï¿½ï¿½ head2 ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ò£¬½ï¿½head1ï¿½ï¿½head2 ï¿½Ï²ï¿½Îªheadï¿½ï¿½ï¿½ï¿½headÒ²ï¿½ï¿½ï¿½ï¿½*/
 LNode* merge_linked_list(LNode* l1, LNode* l2)
 {
 	LNode* result = new LNode;
@@ -163,7 +163,7 @@ LNode* merge_linked_list(LNode* l1, LNode* l2)
 	return result;
 }
 
-/*Ñ°ÕÒÁ´±íµÄ×îÐ¡Öµ½Úµã£¬ ²¢·µ»ØÔÚÁ´±íÖÐµÄÎ»ÖÃ*/
+/*Ñ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½Úµã£¬ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½*/
 int find_min_in_linkedlist(LNode * head)
 {
 	int i = 1;
@@ -181,7 +181,7 @@ int find_min_in_linkedlist(LNode * head)
 	return pos;
 }
 
-/*8.  É¾³ýÁ´±íÖÐÖµ×îÐ¡µÄÔªËØ, ²¢·µ»Ø×îÐ¡ÔªËØ*/
+/*8.  É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ð¡ï¿½ï¿½Ôªï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ôªï¿½ï¿½*/
 ElemType delete_min_value(LNode * head)
 {
 	int cnt = INT_MAX;
@@ -203,14 +203,14 @@ ElemType delete_min_value(LNode * head)
 	return cnt;
 }
 
-/*9. ²éÕÒµÚi¸ö½Úµã£¬²¢·µ»ØÖµ*/
+/*9. ï¿½ï¿½ï¿½Òµï¿½iï¿½ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ*/
 ElemType find_i(LNode * head)
 {
 
 	return ElemType();
 }
 
-/*´´½¨Ë«Á´±í*/
+/*ï¿½ï¿½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½*/
 DBLNode * create_double_linked_list()
 {
 	SqList sl;
@@ -232,7 +232,7 @@ DBLNode * create_double_linked_list()
 
 	return head;
 }
-/*´òÓ¡Ë«Á´±í*/
+/*ï¿½ï¿½Ó¡Ë«ï¿½ï¿½ï¿½ï¿½*/
 void print_linked_list(DBLNode *head)
 {
 	for (DBLNode *p = head; p->next != NULL; p = p->next)
@@ -242,7 +242,7 @@ void print_linked_list(DBLNode *head)
 	cout << endl;
 }
 
-/*9.  ÔÚµÚn¸ö½Úµãºó£¬²åÈë½Úµã*/
+/*9.  ï¿½Úµï¿½nï¿½ï¿½ï¿½Úµï¿½ó£¬²ï¿½ï¿½ï¿½Úµï¿½*/
 void insert_pos_n(DBLNode * head, int n, ElemType value)
 {
 	DBLNode *p = head;
@@ -275,11 +275,11 @@ void insert_pos_n(DBLNode * head, int n, ElemType value)
 		std::cout << "Hello World!\n";
 
 		case1: 1 2 3 4 5 6 7
-		Êä³ö£º 1 -1 2 3 4 5 6 7
+		ï¿½ï¿½ï¿½ï¿½ï¿½ 1 -1 2 3 4 5 6 7
 */
 
 
-/*10.  É¾³ýµÚn¸ö½Úµã*/
+/*10.  É¾ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½Úµï¿½*/
 
 void  delete_pos_n(DBLNode * head,  int n)
 {
@@ -311,12 +311,12 @@ void  delete_pos_n(DBLNode * head,  int n)
 	print_linked_list(head);
 
 	case1:  1 2 3 4 5 6
-	Êä³ö£º 1 3 4 5 6
+	ï¿½ï¿½ï¿½ï¿½ï¿½ 1 3 4 5 6
 */
 //end int
 
 
-/*Á´±í³¤¶È*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 int find_length(LNode* head)
 {
 	if (head == NULL || head->next == NULL)

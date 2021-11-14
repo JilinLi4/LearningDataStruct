@@ -1,12 +1,12 @@
 #include "StackBase.h"
 
-/*³õÊ¼»¯Õ»*/
+
 void init_stack(Stack& sk)
 {
 	sk.top = -1;
 }
 
-/*ÅÐ¿Õ*/
+
 bool empty(Stack& sk)
 {
 	if (sk.top == -1)
@@ -15,7 +15,7 @@ bool empty(Stack& sk)
 		return false;
 }
 
-/*½øÕ»*/
+
 bool push(Stack& sk, DataType data)
 {
 	if (sk.top == MAXSIZE-1)
@@ -24,7 +24,7 @@ bool push(Stack& sk, DataType data)
 	return true;
 }
 
-/*³öÕ»*/
+
 bool pop(Stack& sk, DataType& topdata)
 {
 	if (sk.top == -1)
@@ -32,14 +32,14 @@ bool pop(Stack& sk, DataType& topdata)
 	topdata = sk.data[sk.top--];
 }
 
-/*È¡Õ»¶¥ÔªËØ*/
+
 DataType GetTop(Stack& sk)
 {
 	if(sk.top != -1)
 		return sk.data[sk.top];
 }
 
-/*Á´Ê½Õ»³õÊ¼»¯*/
+
 LinkedStack* init_stack()
 {
 	LinkedStack* head = new LinkedStack;
@@ -47,14 +47,14 @@ LinkedStack* init_stack()
 	return head;
 }
 
-/*ÅÐ¿Õ*/
+/*ï¿½Ð¿ï¿½*/
 bool empty(LinkedStack* lsk)
 {
 	if (lsk == nullptr && lsk->next == nullptr)
 		return true;
 }
 
-/*½øÕ»*/
+/*ï¿½ï¿½Õ»*/
 bool push(LinkedStack*sk, DataType data)
 {
 	LinkedStack* temp = new LinkedStack;
@@ -64,7 +64,7 @@ bool push(LinkedStack*sk, DataType data)
 	return true;
 }
 
-/*³öÕ»*/
+/*ï¿½ï¿½Õ»*/
 bool pop(LinkedStack*sk, DataType& top_data)
 {
 	if (sk == nullptr || sk->next == nullptr)

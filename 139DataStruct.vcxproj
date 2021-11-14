@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="139DataStruct.cpp" />
     <ClCompile Include="bin_tree.cpp" />
+    <ClCompile Include="graph.cpp" />
     <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="sort.cpp" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bin_tree.h" />
+    <ClInclude Include="graph.h" />
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="sort.h" />
